@@ -1,30 +1,38 @@
-# React, Node, Mongo
+# 🌍 Personal Carbon Footprint Tracker
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+A **full-stack web application** that helps individuals track, analyze, and reduce their **carbon footprint** through data-driven insights, gamification, and personalized recommendations.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/syedshadowguy-7704s-projects/v0-react-node-mongo)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/gaj6uKxUo6C)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/junaid-mustafa-006/carbon-footprint-tracker-2k)
 
-## Overview
+---
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## Features
 
-## Deployment
+- **Carbon Tracking**: Calculate transport & lifestyle footprints using Uber and Weather APIs  
+- **AI-Powered Insights**: ML models (Multi-Armed Bandits, LightGBM, Clustering) for personalized recommendations  
+- **Gamification**: Progress tracking, badges, and community leaderboard  
+- **Push Notifications**: Firebase integration for real-time reminders & tips  
+- **Scalable Performance**: Handles 1.5k+ concurrent users, 5k req/sec with <200ms p95 latency (tested with k6)  
 
-Your project is live at:
+---
 
-**[https://vercel.com/syedshadowguy-7704s-projects/v0-react-node-mongo](https://vercel.com/syedshadowguy-7704s-projects/v0-react-node-mongo)**
+## Tech Stack
 
-## Build your app
+**Frontend**: React, Tailwind CSS  
+**Backend**: Node.js, Express  
+**Database**: MongoDB  
+**ML Models**: Multi-Armed Bandits, LightGBM, Clustering  
+**APIs**: Uber API, Weather API  
+**Other Tools**: Firebase, Docker, k6 (load testing)  
 
-Continue building your app on:
+---
 
-**[https://v0.app/chat/projects/gaj6uKxUo6C](https://v0.app/chat/projects/gaj6uKxUo6C)**
+## System Architecture
 
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+```mermaid
+flowchart TD
+  A[Frontend - React] -->|REST API| B[Backend - Node.js/Express]
+  B --> C[Database - MongoDB]
+  B --> D[Machine Learning Models]
+  B --> E[External APIs - Uber/Weather]
+  B --> F[Firebase Notifications]
